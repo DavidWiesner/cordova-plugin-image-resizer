@@ -4,7 +4,7 @@
 //
 // Based on http://iphonedevelopertips.com/graphics/how-to-scale-an-image-using-an-objective-c-category.html
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface UIImage (scale)
 
