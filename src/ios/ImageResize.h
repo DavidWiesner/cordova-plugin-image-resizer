@@ -12,7 +12,7 @@
 //  NSData Base64 : NSData Base64 extension by Dave Winer. http://colloquy.info/project/browser/trunk/NSDataAdditions.h?rev=1576, Source is added with original copyright.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import <Cordova/CDV.h>
 
 @interface ImageResize : CDVPlugin {
