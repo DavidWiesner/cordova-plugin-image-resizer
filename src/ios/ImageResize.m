@@ -63,10 +63,12 @@
         	   scaleFactor = heightFactor;
         } else if (heightFactor == 0.0) {
         	   scaleFactor = widthFactor;
-        } else if (widthFactor > heightFactor) {
+        } else if (widthFactor > heightFactor && heightFactor <= 1.0) {
             scaleFactor = heightFactor; // scale to fit height
-        } else {
+        } else if (widthFactor <= 1.0 ){
             scaleFactor = widthFactor; // scale to fit width
+        } else {
+            scaleFactor = 1.0;
         }
         newWidth = img.size.width * scaleFactor;
         newHeight = img.size.height * scaleFactor;

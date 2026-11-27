@@ -299,10 +299,13 @@ public class ImageResizePlugin extends CordovaPlugin {
                     widthFactor = heightFactor;
                 } else if (heightFactor == 0.0) {
                     heightFactor = widthFactor;
-                } else if (widthFactor > heightFactor) {
+                } else if (widthFactor > heightFactor && heightFactor <= 1.0) {
                     widthFactor = heightFactor; // scale to fit height
-                } else {
+                } else if (widthFactor <= 1.0) {
                     heightFactor = widthFactor; // scale to fit width
+                } else {
+                    widthFactor = 1.0f;
+                    heightFactor = 1.0f;
                 }
             } else {
                 widthFactor = desiredWidth;
